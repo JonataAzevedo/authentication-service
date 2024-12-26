@@ -7,3 +7,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+auth:
+  service:
+    environment: ${ENVIRONMENT_URL:http://localhost:3000}
+    register: ${REGISTER_URL:/auth/register}
+    login: ${LOGIN_URL:/auth/login}
+    home: ${HOME_URL:/home}
